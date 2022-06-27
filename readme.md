@@ -1,4 +1,4 @@
-# Flow
+# Flow.sh
 
 An toolkit for developers to manage our flow state. 
 
