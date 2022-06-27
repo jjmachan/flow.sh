@@ -1,6 +1,7 @@
 # Flow
 
-A terminal app to manage your flow state.
+An app for developers to manage their flow state. 
+
 
 
 ### Where is the code?
