@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import sys
 from time import monotonic
 from typing import List
 
@@ -110,6 +111,7 @@ class StopwatchApp(App):
         ("d", "delete_stopwatch", "Delete"),
         ("j", "move_down", "Down"),
         ("k", "move_up", "Up"),
+        ("q", "quit", "Quit"),
     ]
 
     def compose(self) -> ComposeResult:
@@ -130,6 +132,9 @@ class StopwatchApp(App):
 
     def action_move_up(self) -> None:
         self.query_one("#timers").select_one_up()
+
+    def action_quit(self) -> None:
+        sys.exit(0)
 
 
 if __name__ == "__main__":
