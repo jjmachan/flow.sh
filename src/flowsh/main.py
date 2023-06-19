@@ -31,7 +31,7 @@ class Timer(Static):
     emoji = EMOJI_MAP["pause" if is_paused else "play"]
 
     def on_mount(self) -> None:
-        self.update_timer = self.set_interval(1 / 60, self.update_time, pause=True)
+        self.update_timer = self.set_interval(1, self.update_time, pause=True)
 
     def update_time(self) -> None:
         self.time = self.total + (monotonic() - self.start_time)
