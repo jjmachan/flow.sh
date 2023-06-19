@@ -1,15 +1,21 @@
-[tool.poetry]
-name = "centered-tui"
-version = "0.1.0"
-description = ""
-authors = ["jjmachan <jamesjithin97@gmail.com>"]
+[project]
+name = "flowsh"
+dependencies = [
+    "textual",
+]
+dynamic = ["version", "readme"]
 
-[tool.poetry.dependencies]
-python = "^3.9"
-textual = "^0.1.18"
+[project.scripts]
+flowsh = "flowsh.main:main"
+[tool.setuptools]
+package-dir = {"" = "src"}
 
-[tool.poetry.dev-dependencies]
+[tool.setuptools.dynamic]
+readme = {file = ["README.md"], content-type = "text/plain"}
 
 [build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
+requires = ["setuptools>=45", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+write_to = "src/flowsh/_version.py"
