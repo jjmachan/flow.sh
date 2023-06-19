@@ -1,0 +1,22 @@
+TimerBar {
+    dock: bottom;
+    layout: horizontal;
+    padding-top: 1;
+    padding-bottom: 1;
+    height: 4;
+    background: $boost;
+}
+
+Music {
+    width: 50%;
+    content-align: left middle;
+    padding-left: 5;
+    dock: left;
+}
+
+Timer {
+    content-align: right middle;
+    width: 50%;
+    padding-right: 7;
+    dock: right;
+}
