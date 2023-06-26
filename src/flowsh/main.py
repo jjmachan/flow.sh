@@ -42,12 +42,12 @@ class Timer(Static):
         self.update(f"{self.emoji}  {hours:02.0f}:{minutes:02.0f}:{seconds:02.0f}")
 
     def start(self) -> None:
-        self.emoji = EMOJI_MAP["play"]
+        self.emoji = EMOJI_MAP["pause"]
         self.start_time = monotonic()
         self.update_timer.resume()
 
     def stop(self) -> None:
-        self.emoji = EMOJI_MAP["pause"]
+        self.emoji = EMOJI_MAP["play"]
         self.update_timer.pause()
         self.total += monotonic() - self.start_time
         self.time = self.total
